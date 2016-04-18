@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Write a description of class Creature here.
  * 
@@ -9,14 +9,41 @@ public class Creature
 {
    private int hp;
    private int strength;
+   Random dam = new Random();
    
-   public Creature(){
-       
+   public Creature()
+   {
+       hp = 10;
+       strength = 10;
    }
+   
+   public Creature(int hp, int strength)
+   {
+       if(hp > 5)
+       {
+           System.out.println("The health cannot be less than five");
+       }
+       else
+       {
+           this.hp = hp;
+       }
+       if(strength > 5)
+       {
+           System.out.println("The strength cannot be lower than five");
+       }
+       else
+       {
+           this.strength = strength;
+       }
+    }
     
-   public int damage(){
+   public int damage()
+   {
        //TODO: change this
-       return 0;
+       int damage;
+       damage = (dam.nextInt(strength) + 1);
+       
+       return damage ;
     }
     
 }

@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Creature()
-comment1.params=
-comment1.target=int\ damage()
-numComments=2
+comment1.params=hp\ strength
+comment1.target=Creature(int,\ int)
+comment2.params=
+comment2.target=int\ damage()
+numComments=3
