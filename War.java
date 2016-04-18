@@ -9,7 +9,16 @@ import java.util.Random;
 public class War
 {
     // instance variables - replace the example below with your own
-    private int x;
+    Creature creature = new Creature();
+    Human human = new Human();
+    Elf elf = new Elf();
+    Demon demon = new Demon();
+    CyberDemon cyberDemon = new CyberDemon();
+    Balrog balrog = new Balrog();
+    
+    private ArrayList<Creature> army1;
+    private ArrayList<Creature> army2;
+    Random rand = new Random();
 
     /**
      * Constructor for objects of class War
@@ -17,18 +26,27 @@ public class War
     public War()
     {
         // initialise instance variables
-        x = 0;
+        this.army1 = new ArrayList<Creature>();
+        this.army2 = new ArrayList<Creature>();
+    }
+    
+    public void fillArmy1()
+    {
+        
+        int i;
+        for(i = 0; i < 25; i++)
+        {
+            int chance = rand.nextInt(3) + 1;
+            if(chance > 1)
+            {
+                army1.add(human= new Human());
+            }
+            else
+            {
+                army1.add(elf = new Elf());
+            }
+        }
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }

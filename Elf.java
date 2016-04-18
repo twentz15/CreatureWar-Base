@@ -17,8 +17,6 @@ public class Elf extends Creature
     public Elf()
     {
         super();
-        this.hp = hp;
-        this.strength = strength;
     }
     
     public void setHP()

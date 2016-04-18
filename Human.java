@@ -18,8 +18,8 @@ public class Human extends Creature
     public Human()
     {
         super();
-        this.hp = hp;
-        this.strength = strength;
+        this.hp = (rand.nextInt(25) + 5);
+        this.strength = (rand.nextInt(13) + 5);
     }
     
     public void setHP()
