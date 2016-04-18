@@ -1,11 +1,11 @@
 import java.util.Random;
 /**
- * Write a description of class Hman here.
+ * Write a description of class Balrog here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Human extends Creature
+public class Balrog extends Demon
 {
     // instance variables - replace the example below with your own
     private int hp;
@@ -13,9 +13,9 @@ public class Human extends Creature
     Random rand = new Random();
 
     /**
-     * Constructor for objects of class Human
+     * Constructor for objects of class Balrog
      */
-    public Human()
+    public Balrog()
     {
         super();
         this.hp = hp;
@@ -24,12 +24,12 @@ public class Human extends Creature
     
     public void setHP()
     {
-        hp = (rand.nextInt(25) + 5);
+        hp = (rand.nextInt(30) + 5);
     }
     
     public void setStr()
     {
-        strength = (rand.nextInt(13) + 5);
+        strength = (rand.nextInt(10) + 5);
     }
     
    
