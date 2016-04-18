@@ -17,6 +17,8 @@ public class Elf extends Creature
     public Elf()
     {
         super();
+        this.hp = (rand.nextInt(15) + 5);
+        this.strength = (rand.nextInt(20) + 5);
     }
     
     public void setHP()
