@@ -100,36 +100,30 @@ public class War
             }
                 if(army1.get(i1).getHP() <= 0)
                 {
-                   army1.remove(i1);
                    i1++;
                    System.out.println("Army 1 lost a soldier");
-                   if(i1 == army1.size())
-                   {
-                       finished = true;
-                    }
+                   
                 }
-                else if(army2.get(i2).getHP() <= 0)
+                if(army2.get(i2).getHP() <= 0)
                 {
-                    army2.remove(i2);
                     i2++;
                     System.out.println("Army 2 lost a soldier");
-                    if(i2 == army2.size())
-                   {
-                       finished = true;
-                    }
                 }
-                else{}
-      
-        }
-        if(army1.size() > army2.size())
-        {
-            System.out.println("Army 1 Wins!!!!!!");
-            System.out.println("Be sure to recompile to see another battle");
-        }
-        else
-        {
-            System.out.println("Army 2 Wins!!!!!!");
-            System.out.println("Be sure to recompile to see another battle");
+                if(i1 == army1.size() + 1  || i2 == army2.size() + 1)
+                {
+                    finished = true;
+                }
+            
+            if(army1.size() > army2.size())
+            {
+                System.out.println("Army 1 Wins!!!!!!");
+                System.out.println("Be sure to recompile to see another battle");
+            }
+            else
+            {
+                System.out.println("Army 2 Wins!!!!!!");
+                System.out.println("Be sure to recompile to see another battle");
+            }
         }
     }
     //         if(army1.size() <= i1)
