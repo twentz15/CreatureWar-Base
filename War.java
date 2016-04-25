@@ -36,18 +36,25 @@ public class War
     
     public void fillArmy1()
     {
-        
         int i;
-        for(i = 0; i < 25; i++)
+        for(i = 0; i < 10; i++)
         {
-            int chance = rand.nextInt(3) + 1;
-            if(chance > 1)
+            int chance = rand.nextInt(3);
+            if(chance == 0)
             {
                 army1.add(human= new Human());
             }
-            else
+            else if(chance == 1)
             {
                 army1.add(elf = new Elf());
+            }
+            else if(chance == 2)
+            {
+                army1.add(cyberDemon = new CyberDemon());
+            }
+            else
+            {
+                army1.add(balrog = new Balrog());
             }
         }
     }
@@ -55,10 +62,18 @@ public class War
     public void fillArmy2()
     {
         int i;
-        for(i = 0; i < 25; i++)
+        for(i = 0; i < 10; i++)
         {
-            int chance = rand.nextInt(3) + 1;
-            if(chance > 1)
+            int chance = rand.nextInt(3);
+            if(chance == 0)
+            {
+                army2.add(human= new Human());
+            }
+            else if(chance == 1)
+            {
+                army2.add(elf = new Elf());
+            }
+            else if(chance == 2)
             {
                 army2.add(cyberDemon = new CyberDemon());
             }
@@ -68,33 +83,42 @@ public class War
             }
         }
     }
-    
+   
     public void battle()
     {
         int i1 = 0;
         int i2 = 0;
-        while(i1 < army1.size() && i2 < army2.size())
+        boolean finished = false;
+        while(!finished)
         {
             while(army1.get(i1).getHP() > 0 && army2.get(i2).getHP() > 0)
             {
                 army1.get(i1).takeDamage(army2.get(i2).damage());
+                System.out.println("Army 2 dealt " + army2.get(i2).damage() + " damage");
                 army2.get(i2).takeDamage(army1.get(i1).damage());
+                System.out.println("Army 1 dealt " + army1.get(i1).damage() + " damage");
             }
                 if(army1.get(i1).getHP() <= 0)
                 {
                    army1.remove(i1);
                    i1++;
-                   System.out.println("Army 1's solider was killed by Army 2's soldier");
-                   System.out.println("They dealt " + army2.get(i2).damage());
+                   System.out.println("Army 1 lost a soldier");
+                   if(i1 == army1.size())
+                   {
+                       finished = true;
+                    }
                 }
                 if(army2.get(i2).getHP() <= 0)
                 {
                     army2.remove(i2);
                     i2++;
-                    System.out.println("Army 2's solider was killed by Army 1's soldier");
-                    System.out.println("They dealt " + army2.get(i2).damage());
+                    System.out.println("Army 2 lost a soldier");
+                    if(i2 == army2.size())
+                   {
+                       finished = true;
+                    }
                 }
-                
+      
         }
         if(i1 < army1.size() && i2 >= army2.size())
         {
@@ -132,5 +156,3 @@ public class War
     }
 
 }
-   
-    

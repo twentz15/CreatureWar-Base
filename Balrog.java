@@ -20,7 +20,7 @@ public class Balrog extends Demon
     {
         super();
         this.hp = (rand.nextInt(30) + 5);
-        this.strength = strength;
+        this.strength = (rand.nextInt(10) + 5);
     }
     
     public void setHP()
