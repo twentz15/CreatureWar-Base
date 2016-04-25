@@ -19,10 +19,6 @@ public class War
     private ArrayList<Creature> army1;
     private ArrayList<Creature> army2;
     Random rand = new Random();
-    
-    private boolean finished = false;
-    private boolean army1Van = false;
-    private boolean army2Van = false;
 
     /**
      * Constructor for objects of class War
@@ -58,7 +54,9 @@ public class War
             }
         }
     }
+
     
+<<<<<<< HEAD
     public void fillArmy2()
     {
         int i;
@@ -145,4 +143,6 @@ public class War
         army2.clear();
     }
 
+=======
+>>>>>>> parent of f095897... added unique values
 }

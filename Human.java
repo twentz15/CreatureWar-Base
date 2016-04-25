@@ -29,7 +29,13 @@ public class Human extends Creature
     
     public void setStr()
     {
+<<<<<<< HEAD
         strength = rand.nextInt(13) + 5;
     }
+=======
+        strength = (rand.nextInt(13) + 5);
+    }
+    
+>>>>>>> parent of f095897... added unique values
    
 }

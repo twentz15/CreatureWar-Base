@@ -11,7 +11,6 @@ public class Balrog extends Demon
     private int hp;
     private int strength;
     Random rand = new Random();
-    private int uniqueVal = 3;
 
     /**
      * Constructor for objects of class Balrog
@@ -33,10 +32,13 @@ public class Balrog extends Demon
         strength = (rand.nextInt(10) + 5);
     }
     
+<<<<<<< HEAD
     public int damage()
    {
        return super.damage() + super.damage();
    }
     
+=======
+>>>>>>> parent of f095897... added unique values
    
 }
