@@ -38,5 +38,14 @@ public class Balrog extends Demon
         return uniqueVal;
     }
     
+    public int damage()
+   {
+       super.damage();
+       
+       damage = damage + damage;
+       
+       return damage ;
+   }
+    
    
 }

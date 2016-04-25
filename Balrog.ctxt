@@ -8,4 +8,6 @@ comment2.params=
 comment2.target=void\ setStr()
 comment3.params=
 comment3.target=int\ getUnique()
-numComments=4
+comment4.params=
+comment4.target=int\ damage()
+numComments=5

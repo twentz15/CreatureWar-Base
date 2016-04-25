@@ -32,8 +32,17 @@ public class Elf extends Creature
         strength = (rand.nextInt(20) + 5);
     }
     
-    public int getUnique()
-    {
-        return uniqueVal;
-    }
+    public int damage()
+   {
+       int randElfDam = (rand.nextInt(10) + 1);
+       super.damage();
+       
+       if(randElfDam == 4)
+       {
+           damage = damage * 2;
+       }
+       
+       
+       return damage ;
+   }
 }
