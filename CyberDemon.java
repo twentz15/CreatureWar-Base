@@ -11,11 +11,9 @@ public class CyberDemon extends Demon
     private int strength;
     Random rand = new Random();
     
-    public CyberDemon()
+    public CyberDemon(int hp, int str)
     {
-        super();
-        this.hp = (rand.nextInt(20) + 5);
-        this.strength = strength;
+        super(hp, str);
     }
     
     public void setHP()

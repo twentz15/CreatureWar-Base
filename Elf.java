@@ -15,21 +15,12 @@ public class Elf extends Creature
     /**
      * Constructor for objects of class Human
      */
-    public Elf()
+    public Elf(int hp, int str)
     {
         super();
-        this.hp = rand.nextInt(15) + 5;
-        this.strength = rand.nextInt(20) + 5;
-    }
-    
-    public void setHP()
-    {
-        hp = rand.nextInt(15) + 5;
-    }
-    
-    public void setStr()
-    {
-        strength = rand.nextInt(20) + 5;
+        super.setHP(hp);
+        super.setStrength(str);
+
     }
     
     public int damage()

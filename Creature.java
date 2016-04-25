@@ -17,29 +17,34 @@ public class Creature
        strength = 10;
    }
    
-   public Creature(int hp, int strength)
+   public void setHP(int health)
    {
-       if(hp < 5)
+       if(health < 5)
        {
-           System.out.println("The health cannot be less than five");
-           this.hp += 5;
+           health += 5;
+           hp = health;
        }
        else
        {
-           this.hp = hp;
+           hp = health;
        }
-       if(strength < 5)
-       {
-           System.out.println("The strength cannot be lower than five");
-           this.strength += 5;
-       }
-       else
-       {
-           this.strength = strength;
-       }
-    }
+        
+   }
    
-    
+   public void setStrength(int str)
+   {
+       if(str < 5)
+       {
+           str += 5;
+           strength = str;
+       }
+       else
+       {
+           strength = str;
+       }
+   }
+   
+       
    public int getHP()
    {
        return hp;

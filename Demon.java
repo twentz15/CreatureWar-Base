@@ -15,21 +15,11 @@ public class Demon extends Creature
     /**
      * Constructor for objects of class Human
      */
-   public Demon()
+   public Demon(int hp, int str)
    {
         super();
-        this.hp = hp;
-        this.strength = strength;
-   }
-    
-   public void setHP()
-   {
-        hp = (rand.nextInt(23) + 5);
-   }
-    
-   public void setStr()
-   {
-        strength = (rand.nextInt(20) + 5);
+        super.setHP(hp);
+        super.setStrength(str);
    }
     
    public int damage()

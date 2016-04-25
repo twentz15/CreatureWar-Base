@@ -10,11 +10,6 @@ public class War
 {
     // instance variables - replace the example below with your own
     Creature creature = new Creature();
-    Human human = new Human();
-    Elf elf = new Elf();
-    Demon demon = new Demon();
-    CyberDemon cyberDemon = new CyberDemon();
-    Balrog balrog = new Balrog();
     
     private ArrayList<Creature> army1;
     private ArrayList<Creature> army2;
@@ -38,16 +33,24 @@ public class War
     {
         
         int i;
-        for(i = 0; i < 25; i++)
+        for(i = 0; i < 10; i++)
         {
-            int chance = rand.nextInt(3) + 1;
-            if(chance > 1)
+            int chance = rand.nextInt(4);
+            if(chance == 0)
             {
-                army1.add(human= new Human());
+                army1.add(creature = new Human(rand.nextInt(31), rand.nextInt(19)));
+            }
+            else if(chance == 1)
+            {
+                army1.add(creature = new Elf(rand.nextInt(25), rand.nextInt(18)));
+            }
+            else if(chance == 2)
+            {
+                army1.add(creature = new CyberDemon(rand.nextInt(36), rand.nextInt(22)));
             }
             else
             {
-                army1.add(elf = new Elf());
+                army1.add(creature = new Balrog(rand.nextInt(51), rand.nextInt(29)));
             }
         }
     }
@@ -55,16 +58,24 @@ public class War
     public void fillArmy2()
     {
         int i;
-        for(i = 0; i < 25; i++)
+        for(i = 0; i < 10; i++)
         {
-            int chance = rand.nextInt(3) + 1;
-            if(chance > 1)
+            int chance = rand.nextInt(4);
+            if(chance == 0)
             {
-                army2.add(cyberDemon = new CyberDemon());
+                army2.add(creature = new Human(rand.nextInt(31), rand.nextInt(19)));
+            }
+            else if(chance == 1)
+            {
+                army2.add(creature = new Elf(rand.nextInt(25), rand.nextInt(18)));
+            }
+            else if(chance == 2)
+            {
+                army2.add(creature = new CyberDemon(rand.nextInt(36), rand.nextInt(22)));
             }
             else
             {
-                army2.add(balrog = new Balrog());
+                army2.add(creature = new Balrog(rand.nextInt(51), rand.nextInt(29)));
             }
         }
     }
@@ -78,21 +89,21 @@ public class War
             while(army1.get(i1).getHP() > 0 && army2.get(i2).getHP() > 0)
             {
                 army1.get(i1).takeDamage(army2.get(i2).damage());
+                System.out.println("Army 2 attacked for " + army2.get(i2).damage() + " damage points");
                 army2.get(i2).takeDamage(army1.get(i1).damage());
+                System.out.println("Army 1 attacked for " + army1.get(1).damage() + " damage points");
             }
                 if(army1.get(i1).getHP() <= 0)
                 {
                    army1.remove(i1);
                    i1++;
                    System.out.println("Army 1's solider was killed by Army 2's soldier");
-                   System.out.println("They dealt " + army2.get(i2).damage());
                 }
                 if(army2.get(i2).getHP() <= 0)
                 {
                     army2.remove(i2);
                     i2++;
                     System.out.println("Army 2's solider was killed by Army 1's soldier");
-                    System.out.println("They dealt " + army2.get(i2).damage());
                 }
                 
         }
