@@ -37,7 +37,12 @@ public class Creature
            this.strength = strength;
        }
     }
+   
     
+   public int getHP()
+   {
+       return hp;
+   }
    public int damage()
    {
        damage = (dam.nextInt(strength) + 1);
@@ -45,9 +50,9 @@ public class Creature
        return damage ;
    }
    
-   public void takeDamage()
+   public void takeDamage(int dmg)
    {
-       hp = hp - damage;
+       hp -= dmg;
    }
     
 }

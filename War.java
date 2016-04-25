@@ -60,27 +60,47 @@ public class War
             int chance = rand.nextInt(3) + 1;
             if(chance > 1)
             {
-                army1.add(cyberDemon = new CyberDemon());
+                army2.add(cyberDemon = new CyberDemon());
             }
             else
             {
-                army1.add(balrog = new Balrog());
+                army2.add(balrog = new Balrog());
             }
         }
     }
     
     public void battle()
     {
-        while(!finished)
+        int i1 = 0;
+        int i2 = 0;
+        while(i1 < army1.size() && i2 < army2.size())
         {
-            for(int x = 0; x >= 25; )
+            while(army1.get(i1).getHP() > 0 && army2.get(i2).getHP() > 0)
             {
-                for(int y = 0; y >=21; )
+                army1.get(i1).takeDamage(army2.get(i2).damage());
+                army2.get(i2).takeDamage(army1.get(i1).damage());
+            }
+                if(army1.get(i1).getHP() <= 0)
                 {
-                    
+                   army1.remove(i1);
+                   i1++;
                 }
+                if(army2.get(i2).getHP() <= 0)
+                {
+                    army2.remove(i2);
+                    i2++;
+                }
+                
+            }
+        
+        if(army1.size() == i1)
+        {
+            System.out.println("Army 2 Wins");
         }
-    }
+        else
+        {
+            System.out.println("Army 1 Wins");
+        }
+   }
     
    }
-}
