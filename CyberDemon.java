@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Write a description of class CyberDemon here.
  * 
@@ -7,5 +7,25 @@
  */
 public class CyberDemon extends Demon
 {
+    private int hp;
+    private int strength;
+    Random rand = new Random();
+    
+    public CyberDemon()
+    {
+        super();
+        this.hp = hp;
+        this.strength = strength;
+    }
+    
+    public void setHP()
+    {
+        hp = (rand.nextInt(20) + 5);
+    }
+    
+    public void setStr()
+    {
+        strength = (rand.nextInt(12) + 5);
+    }
     
 }

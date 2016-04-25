@@ -5,4 +5,6 @@ comment1.params=hp\ strength
 comment1.target=Creature(int,\ int)
 comment2.params=
 comment2.target=int\ damage()
-numComments=3
+comment3.params=
+comment3.target=void\ takeDamage()
+numComments=4

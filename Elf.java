@@ -9,6 +9,7 @@ public class Elf extends Creature
 {
     private int hp;
     private int strength;
+    private int uniqueVal = 2;
     Random rand = new Random();
 
     /**
@@ -31,5 +32,8 @@ public class Elf extends Creature
         strength = (rand.nextInt(20) + 5);
     }
     
-   
+    public int getUnique()
+    {
+        return uniqueVal;
+    }
 }

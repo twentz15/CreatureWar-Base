@@ -9,6 +9,7 @@ public class Creature
 {
    protected int hp;
    protected int strength;
+   protected int damage;
    Random dam = new Random();
    
    public Creature()
@@ -39,11 +40,14 @@ public class Creature
     
    public int damage()
    {
-       //TODO: change this
-       int damage;
        damage = (dam.nextInt(strength) + 1);
        
        return damage ;
-    }
+   }
+   
+   public void takeDamage()
+   {
+       hp = hp - damage;
+   }
     
 }

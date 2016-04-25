@@ -19,6 +19,10 @@ public class War
     private ArrayList<Creature> army1;
     private ArrayList<Creature> army2;
     Random rand = new Random();
+    
+    private boolean finished = false;
+    private boolean army1Van = false;
+    private boolean army2Van = false;
 
     /**
      * Constructor for objects of class War
@@ -47,6 +51,36 @@ public class War
             }
         }
     }
-
     
+    public void fillArmy2()
+    {
+        int i;
+        for(i = 0; i < 21; i++)
+        {
+            int chance = rand.nextInt(3) + 1;
+            if(chance > 1)
+            {
+                army1.add(cyberDemon = new CyberDemon());
+            }
+            else
+            {
+                army1.add(balrog = new Balrog());
+            }
+        }
+    }
+    
+    public void battle()
+    {
+        while(!finished)
+        {
+            for(int x = 0; x >= 25; )
+            {
+                for(int y = 0; y >=21; )
+                {
+                    
+                }
+        }
+    }
+    
+   }
 }
