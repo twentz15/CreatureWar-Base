@@ -55,7 +55,7 @@ public class War
     public void fillArmy2()
     {
         int i;
-        for(i = 0; i < 21; i++)
+        for(i = 0; i < 25; i++)
         {
             int chance = rand.nextInt(3) + 1;
             if(chance > 1)
@@ -71,6 +71,10 @@ public class War
     
     public void battle()
     {
+        
+        fillArmy1();
+        fillArmy2();
+        
         int i1 = 0;
         int i2 = 0;
         while(i1 < army1.size() && i2 < army2.size())
@@ -84,23 +88,48 @@ public class War
                 {
                    army1.remove(i1);
                    i1++;
+                   System.out.println("Army 1's solider was killed by Army 2's soldier");
+                   System.out.println("They dealt " + army2.get(i2).damage());
                 }
                 if(army2.get(i2).getHP() <= 0)
                 {
                     army2.remove(i2);
                     i2++;
+                    System.out.println("Army 2's solider was killed by Army 1's soldier");
+                    System.out.println("They dealt " + army2.get(i2).damage());
                 }
                 
             }
-        
-        if(army1.size() == i1)
+        if(i1 < army1.size() && i2 >= army2.size())
         {
-            System.out.println("Army 2 Wins");
+            System.out.println("Army 1 Wins!!!");
+            army1.clear();
+            army2.clear();
+        }
+        else if(i1 >= army1.size() && i2 < army2.size())
+        {
+            System.out.println("Army 2 Wins!!!");
+            army1.clear();
+            army2.clear();
         }
         else
         {
-            System.out.println("Army 1 Wins");
+            System.out.println("NOBODY Wins!!!");
+            army1.clear();
+            army2.clear();
         }
+    }
+    //         if(army1.size() <= i1)
+    //         {
+    //             System.out.println("Army 2 Wins");
+    //             army1.clear();
+    //             army2.clear();
+    //         }
+    //         else
+    //         {    
+    //             System.out.println("Army 1 Wins");
+    //             army1.clear();
+    //             army2.clear();
+    //         }
    }
     
-   }
