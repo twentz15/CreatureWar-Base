@@ -24,7 +24,7 @@ public class Demon extends Creature
     
    public void setHP()
    {
-        hp = (rand.nextInt(20) + 5);
+        hp = (rand.nextInt(23) + 5);
    }
     
    public void setStr()
@@ -35,14 +35,13 @@ public class Demon extends Creature
    public int damage()
    {
        int randDemDam = (rand.nextInt(20) + 1);
-       super.damage();
        
        if(randDemDam == 4)
        {
-           damage += 50;
+           return super.damage() + 50;
        }
        
-       return damage ;
+       return super.damage();
    }
    
 }

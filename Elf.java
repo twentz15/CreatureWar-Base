@@ -9,7 +9,7 @@ public class Elf extends Creature
 {
     private int hp;
     private int strength;
-    private int uniqueVal = 2;
+    
     Random rand = new Random();
 
     /**
@@ -18,31 +18,28 @@ public class Elf extends Creature
     public Elf()
     {
         super();
-        this.hp = (rand.nextInt(15) + 5);
-        this.strength = (rand.nextInt(20) + 5);
+        this.hp = rand.nextInt(15) + 5;
+        this.strength = rand.nextInt(20) + 5;
     }
     
     public void setHP()
     {
-        hp = (rand.nextInt(15) + 5);
+        hp = rand.nextInt(15) + 5;
     }
     
     public void setStr()
     {
-        strength = (rand.nextInt(20) + 5);
+        strength = rand.nextInt(20) + 5;
     }
     
     public int damage()
    {
-       int randElfDam = (rand.nextInt(10) + 1);
-       super.damage();
+       int randElfDam = rand.nextInt(10);
        
-       if(randElfDam == 4)
+       if(randElfDam == 5)
        {
-           damage = damage * 2;
+           return super.damage() * 2;
        }
-       
-       
-       return damage ;
+       return super.damage();
    }
 }

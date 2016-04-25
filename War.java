@@ -71,10 +71,6 @@ public class War
     
     public void battle()
     {
-        
-        fillArmy1();
-        fillArmy2();
-        
         int i1 = 0;
         int i2 = 0;
         while(i1 < army1.size() && i2 < army2.size())
@@ -99,24 +95,21 @@ public class War
                     System.out.println("They dealt " + army2.get(i2).damage());
                 }
                 
-            }
+        }
         if(i1 < army1.size() && i2 >= army2.size())
         {
             System.out.println("Army 1 Wins!!!");
-            army1.clear();
-            army2.clear();
+            System.out.println("Be Sure To Clear before another battle");
         }
         else if(i1 >= army1.size() && i2 < army2.size())
         {
             System.out.println("Army 2 Wins!!!");
-            army1.clear();
-            army2.clear();
+            System.out.println("Be Sure To Clear before another battle");
         }
         else
         {
             System.out.println("NOBODY Wins!!!");
-            army1.clear();
-            army2.clear();
+            System.out.println("Be Sure To Clear before another battle");
         }
     }
     //         if(army1.size() <= i1)
@@ -131,5 +124,13 @@ public class War
     //             army1.clear();
     //             army2.clear();
     //         }
-   }
+   
+    public void clearField()
+    {
+        army1.clear();
+        army2.clear();
+    }
+
+}
+   
     

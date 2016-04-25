@@ -11,7 +11,6 @@ public class Human extends Creature
     private int hp;
     private int strength;
     Random rand = new Random();
-    private int uniqueVal = 1;
 
     /**
      * Constructor for objects of class Human
@@ -19,23 +18,18 @@ public class Human extends Creature
     public Human()
     {
         super();
-        this.hp = (rand.nextInt(25) + 5);
-        this.strength = (rand.nextInt(13) + 5);
+        this.hp = rand.nextInt(25) + 5;
+        this.strength = rand.nextInt(13) + 5;
     }
     
     public void setHP()
     {
-        hp = (rand.nextInt(25) + 5);
+        hp = rand.nextInt(25) + 5;
     }
     
     public void setStr()
     {
-        strength = (rand.nextInt(13) + 5);
-    }
-    
-    public int getUnique()
-    {
-        return uniqueVal;
+        strength = rand.nextInt(13) + 5;
     }
    
 }

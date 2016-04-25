@@ -14,7 +14,7 @@ public class CyberDemon extends Demon
     public CyberDemon()
     {
         super();
-        this.hp = hp;
+        this.hp = (rand.nextInt(20) + 5);
         this.strength = strength;
     }
     

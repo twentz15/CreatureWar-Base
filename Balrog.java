@@ -19,7 +19,7 @@ public class Balrog extends Demon
     public Balrog()
     {
         super();
-        this.hp = hp;
+        this.hp = (rand.nextInt(30) + 5);
         this.strength = strength;
     }
     
@@ -33,18 +33,9 @@ public class Balrog extends Demon
         strength = (rand.nextInt(10) + 5);
     }
     
-    public int getUnique()
-    {
-        return uniqueVal;
-    }
-    
     public int damage()
    {
-       super.damage();
-       
-       damage = damage + damage;
-       
-       return damage ;
+       return super.damage() + super.damage();
    }
     
    
