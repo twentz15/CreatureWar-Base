@@ -108,7 +108,7 @@ public class War
                        finished = true;
                     }
                 }
-                if(army2.get(i2).getHP() <= 0)
+                else if(army2.get(i2).getHP() <= 0)
                 {
                     army2.remove(i2);
                     i2++;
@@ -118,22 +118,18 @@ public class War
                        finished = true;
                     }
                 }
+                else{}
       
         }
-        if(i1 < army1.size() && i2 >= army2.size())
+        if(army1.size() > army2.size())
         {
-            System.out.println("Army 1 Wins!!!");
-            System.out.println("Be Sure To Clear before another battle");
-        }
-        else if(i1 >= army1.size() && i2 < army2.size())
-        {
-            System.out.println("Army 2 Wins!!!");
-            System.out.println("Be Sure To Clear before another battle");
+            System.out.println("Army 1 Wins!!!!!!");
+            System.out.println("Be sure to recompile to see another battle");
         }
         else
         {
-            System.out.println("NOBODY Wins!!!");
-            System.out.println("Be Sure To Clear before another battle");
+            System.out.println("Army 2 Wins!!!!!!");
+            System.out.println("Be sure to recompile to see another battle");
         }
     }
     //         if(army1.size() <= i1)
