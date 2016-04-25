@@ -11,13 +11,16 @@ public class Balrog extends Demon
     private int hp;
     private int strength;
     Random rand = new Random();
+    private int uniqueVal = 3;
 
     /**
      * Constructor for objects of class Balrog
      */
-    public Balrog(int hp, int str)
+    public Balrog()
     {
-        super(hp, str);
+        super();
+        this.hp = (rand.nextInt(30) + 5);
+        this.strength = strength;
     }
     
     public void setHP()

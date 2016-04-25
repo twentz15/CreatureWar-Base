@@ -1,16 +1,14 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Creature()
-comment1.params=health
-comment1.target=void\ setHP(int)
-comment2.params=str
-comment2.target=void\ setStrength(int)
+comment1.params=hp\ strength
+comment1.target=Creature(int,\ int)
+comment2.params=
+comment2.target=int\ getHP()
 comment3.params=
-comment3.target=int\ getHP()
+comment3.target=int\ getStrength()
 comment4.params=
-comment4.target=int\ getStrength()
-comment5.params=
-comment5.target=int\ damage()
-comment6.params=dmg
-comment6.target=void\ takeDamage(int)
-numComments=7
+comment4.target=int\ damage()
+comment5.params=dmg
+comment5.target=void\ takeDamage(int)
+numComments=6

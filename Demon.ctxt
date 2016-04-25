@@ -1,7 +1,11 @@
 #BlueJ class context
-comment0.params=hp\ str
-comment0.target=Demon(int,\ int)
+comment0.params=
+comment0.target=Demon()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Human\r\n
 comment1.params=
-comment1.target=int\ damage()
-numComments=2
+comment1.target=void\ setHP()
+comment2.params=
+comment2.target=void\ setStr()
+comment3.params=
+comment3.target=int\ damage()
+numComments=4
