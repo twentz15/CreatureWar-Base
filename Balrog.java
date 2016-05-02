@@ -32,13 +32,10 @@ public class Balrog extends Demon
         strength = (rand.nextInt(10) + 5);
     }
     
-<<<<<<< HEAD
+
     public int damage()
    {
        return super.damage() + super.damage();
    }
-    
-=======
->>>>>>> parent of f095897... added unique values
    
 }

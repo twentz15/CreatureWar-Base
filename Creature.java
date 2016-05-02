@@ -52,21 +52,14 @@ public class Creature
    
    public int damage()
    {
-<<<<<<< HEAD
-       return dam.nextInt(strength) + 1;
-   }
-   
-   public void takeDamage(int dmg)
-   {
-       hp -= dmg;
-   }
-=======
-       //TODO: change this
        int damage;
        damage = (dam.nextInt(strength) + 1);
        
        return damage ;
     }
->>>>>>> parent of f095897... added unique values
-    
+   
+   public void takeDamage(int dmg)
+   {
+       hp -= dmg;
+   }
 }

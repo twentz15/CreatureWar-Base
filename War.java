@@ -56,7 +56,7 @@ public class War
     }
 
     
-<<<<<<< HEAD
+
     public void fillArmy2()
     {
         int i;
@@ -86,8 +86,7 @@ public class War
     {
         int i1 = 0;
         int i2 = 0;
-        boolean finished = false;
-        while(!finished)
+        while(i1 < army1.size() && i2 < army2.size())
         {
             while(army1.get(i1).getHP() > 0 && army2.get(i2).getHP() > 0)
             {
@@ -107,22 +106,23 @@ public class War
                     i2++;
                     System.out.println("Army 2 lost a soldier");
                 }
-                if(i1 == army1.size() + 1  || i2 == army2.size() + 1)
-                {
-                    finished = true;
-                }
             
-            if(army1.size() > army2.size())
-            {
-                System.out.println("Army 1 Wins!!!!!!");
-                System.out.println("Be sure to recompile to see another battle");
-            }
-            else
+        }
+        if(i1 > i2)
             {
                 System.out.println("Army 2 Wins!!!!!!");
                 System.out.println("Be sure to recompile to see another battle");
             }
-        }
+            else if(i2 > i1)
+            {
+                System.out.println("Army  Wins!!!!!!");
+                System.out.println("Be sure to recompile to see another battle");
+            }
+            else
+            {
+                System.out.println("Army  Wins!!!!!!");
+                System.out.println("Be sure to recompile to see another battle");
+            }
     }
     //         if(army1.size() <= i1)
     //         {
@@ -143,6 +143,4 @@ public class War
         army2.clear();
     }
 
-=======
->>>>>>> parent of f095897... added unique values
 }

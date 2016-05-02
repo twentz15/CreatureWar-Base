@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Write a description of class CyberDemon here.
  * 
@@ -7,7 +7,6 @@
  */
 public class CyberDemon extends Demon
 {
-<<<<<<< HEAD
     private int hp;
     private int strength;
     Random rand = new Random();
@@ -28,7 +27,5 @@ public class CyberDemon extends Demon
     {
         strength = (rand.nextInt(12) + 5);
     }
-=======
->>>>>>> parent of f095897... added unique values
     
 }

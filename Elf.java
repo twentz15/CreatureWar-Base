@@ -9,10 +9,7 @@ public class Elf extends Creature
 {
     private int hp;
     private int strength;
-<<<<<<< HEAD
-    
-=======
->>>>>>> parent of f095897... added unique values
+
     Random rand = new Random();
 
     /**
@@ -35,7 +32,6 @@ public class Elf extends Creature
         strength = rand.nextInt(20) + 5;
     }
     
-<<<<<<< HEAD
     public int damage()
    {
        int randElfDam = rand.nextInt(10);
@@ -46,7 +42,4 @@ public class Elf extends Creature
        }
        return super.damage();
    }
-=======
-   
->>>>>>> parent of f095897... added unique values
 }
